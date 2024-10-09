@@ -32,8 +32,8 @@ header figure {
   align-items: center;
 }
 header figure img {
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: auto;
 }
 
 main {

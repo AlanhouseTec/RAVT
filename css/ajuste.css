@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+main{
+    min-height: 80vh;
+}
+#container {
+    max-width: 1200px;
+    min-height: 80vh;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    height: 50px;
+    color: white;
+    background: rgb(255, 102, 0);
+    background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+  }
+header button{
+    z-index: 2;
+    background-color: transparent;
+}
+
+#container-header h1 {
+    text-align: center;
+    color: #333;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabela th, .tabela td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabela th {
+    background-color: #f8f8f8;
+}
+
+#container-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.figureFechar {
+    margin: 0px auto;
+    padding: 0;
+    z-index: 2;
+    width: 25PX;
+}
+#novo-Ajuste{
+    
+        background-color: transparent; /* Fundo transparente */
+        border: none; /* Remove qualquer borda, se houver */
+        text-decoration: none; /* Remove sublinhado */
+        display: inline-block; /* Para aplicar largura e altura */
+
+    
+}
+/* Estiliza a div principal */
+.ajuste-container {
+    display: none; /* Inicia invisível até ser exibido */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do ajuste de estoque */
+.ajuste-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estiliza os campos de Data e Operação */
+.filter-item {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-item label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filter-item input,
+.filter-item select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px; /* Limita o tamanho dos campos de input */
+}
+
+.filter-item select {
+    width: 220px; /* Especifica o tamanho do select */
+}
+
+/* Botões de ação */
+.ajuste-container .button-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ajuste-container .button-header img {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.ajuste-container .button-header a {
+    background-color: #ffa500;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estiliza a tabela */
+.ajuste-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.ajuste-container table th,
+.ajuste-container table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.ajuste-container table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.ajuste-container table td {
+    background-color: #fdfdfd;
+}
+
+/* Estiliza os botões */
+.ajuste-container button {
+    background-color: #ffa500;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ajuste-container button:hover {
+    background-color: #e69500;
+}
+.button-header button{
+    margin: 0px;
+    padding: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    color: White;
+    background: rgb(255, 102, 0);
+    background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+  }
+  footer p{
+    margin: 0;
+  }
+
+/* Limita o tamanho dos campos de data */
+input[type="date"], [type="text"]{
+    width: 150px;
+    height: 20px;
+}
+.ajuste-buttons{   
+    padding: 13px 20px ; 
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.ajuste-info{
+    align-items: center;
+    background-color: #eaeaea;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+
+}
+a {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove qualquer borda, se houver */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block; /* Para aplicar largura e altura */
+}
+header figure {
+    display: flex;
+    align-items: center;
+  }
+  header figure img {
+    width: 150px;
+    height: auto;
+  }
+  
