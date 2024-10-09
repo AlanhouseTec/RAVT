@@ -35,8 +35,8 @@ header {
         align-items: center;
 
         img {
-            width: 100px;
-            height: 50px;
+            width: 150px;
+            height: auto;
         }
     }
 }
@@ -59,6 +59,11 @@ main {
             img{
 
                 height: 75px;
+            }
+
+            #ravt {
+                width: 150px;
+                height: auto;
             }
         }
         .menu{
