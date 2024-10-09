@@ -1,10 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+* {
+    padding: 0;
     margin: 0;
-    padding: 20px;
+    box-sizing: border-box;
 }
-
+  
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    height: 50px;
+    color: white;
+    background: rgb(255, 102, 0);
+    background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+}
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+.logo {
+    width: 150px;
+    height: auto;
+}
+header .voltarMenu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+header .voltarMenu:hover {
+    background-color: rgba(255, 230, 145, 0.7);
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+header figure {
+    display: flex;
+    align-items: center;
+}
+header figure img {
+    width: 100px;
+    height: 50px;
+}
+main {
+    min-height: 90vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -75,21 +123,30 @@ nav ul li {
 .report {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(160, 159, 159);
+    background-color: #f0f0f0;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
-
 .report-section {
     flex: 1;
-    margin: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
 }
 
 .data-box {
-    border: 1px dashed #ddd;
-    padding: 10px;
+    border: 2px dashed #aaa; /* Borda mais espessa e cor visível */
+    background-color: #f0f0f0;
+    flex-grow: 1;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h3 {
+    height: 44px;
 }
 
 table {
@@ -143,4 +200,13 @@ th, td {
 .div-header{
     display: flex;
     justify-content: space-between;
+}
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    color: White;
+    background: rgb(255, 102, 0);
+    background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
 }
