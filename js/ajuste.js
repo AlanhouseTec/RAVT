@@ -16,7 +16,7 @@ mostraAjusteBtn.addEventListener('click', () => {
 });
 voltarBtn1.addEventListener('click', () => {
     container.style.display = 'block'; // Mostra o container principal de volta
-    novoAjuste.style.display = 'none'; // Mostra a div de ajuste
+    exibeAjuste.style.display = 'none'; // Mostra a div de ajuste
 });
 voltarBtn2.addEventListener('click', () => {
     container.style.display = 'block'; // Mostra o container principal de volta
@@ -49,4 +49,3 @@ btAdciona.addEventListener('click', () => {
         novaLinha.remove(); // Remove a linha da tabela
     });
 });
-

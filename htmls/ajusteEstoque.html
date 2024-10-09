@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajuste de Estoque</title>
-    <link rel="stylesheet" href="/css/ajuste.css">
+    <link rel="stylesheet" href="../css/ajuste.css">
 </head>
 <body>
     <div id="container">
@@ -13,11 +13,11 @@
                 <h1>Ajuste de Estoque</h1>
                 <div class="button-header">
                     <button id="novoBtn">
-                        <img width="30px" height="30px" src="/images/novo-documento.svg" title="Novo" alt="">
+                        <img width="30px" height="30px" src="../images/novo-documento.svg" title="Novo" alt="">
                     </button>
-                    <a href="/html's/menu.html">
+                    <a href="../html's/menu.html">
                         <button id="fechar"href>
-                        <img width="30px" height="30px" src="/images/botao-fechar.svg" title="Fechar" alt="">
+                        <img width="30px" height="30px" src="../images/botao-fechar.svg" title="Fechar" alt="">
                         </button>
                     </a>
                 </div>
@@ -63,9 +63,9 @@
                 <!-- Outras linhas de ajustes virão aqui -->
             </tbody>
         </table>
-        <footer>
-            <p>Quantidade de Registros: 2</p>
-        </footer>
+        <div>
+            <p>Quantidade de Registros: 1</p>
+        </div>
     </div>
     <!-- Esta div ficará oculta até que o botão seja clicado -->
     <div id="ver-Ajuste" style="display: none;" class="ajuste-container">
@@ -130,11 +130,11 @@
                     <!-- Mais itens podem ser adicionados aqui -->
                 </tbody>
             </table>
-            <footer class="ajuste-footer">
+            <div class="ajuste-footer">
                 <p>Valor Total: R$ 1.607,82 </p>
                 <p>Itens: 240</p>
                 <p>Volumes: 0</p>
-            </footer>
+            </div>
         </div>
     </div>
         <div id="novo-Ajuste" style="display: none;" class="ajuste-container">
@@ -193,7 +193,6 @@
             </div>
     </div> 
 
-    <script src="/JS/ajuste.js"></script>
+    <script src="../JS/ajuste.js"></script>
 </body>
 </html>
-
