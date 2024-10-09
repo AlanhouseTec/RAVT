@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuste de Estoque</title>
+    <link rel="stylesheet" href="../css/ajuste.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="container-header">
+                <h1>Ajuste de Estoque</h1>
+                <div class="button-header">
+                    <button id="novoBtn">
+                        <img width="30px" height="30px" src="../images/novo-documento.svg" title="Novo" alt="">
+                    </button>
+                    <a href="../html's/menu.html">
+                        <button id="fechar"href>
+                        <img width="30px" height="30px" src="../images/botao-fechar.svg" title="Fechar" alt="">
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="filters">
+            <div class="filter-item">
+                <label for="data-inicial">Data Inicial:</label>
+                <input type="date" id="data-inicial" name="data-inicial">
+            </div>
+            <div class="filter-item">
+                <label for="data-final">Data Final:</label>
+                <input type="date" id="data-final" name="data-final">
+            </div>
+            <div class="filter-item">
+                <label for="numero-ajuste">Número:</label>
+                <input type="text" id="numero-ajuste" name="numero-ajuste" placeholder="Número do ajuste">
+            </div>
+            <div class="buttons">
+                <button id="filtrar-btn">Aplicar Filtro</button>
+                <button id="limpar-btn">Limpar Filtros</button>
+            </div>
+        </div>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Número</th>
+                    <th>Tipo</th>
+                    <th>Observações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button id="mostraAjusteBtn">Exemplo</button></td>
+                    <td>07/10/2024</td>
+                    <td>1234</td>
+                    <td>Entrada</td>
+                    <td>Sem observações</td>
+                </tr>
+                <!-- Outras linhas de ajustes virão aqui -->
+            </tbody>
+        </table>
+        <footer>
+            <p>Quantidade de Registros: 2</p>
+        </footer>
+    </div>
+    <!-- Esta div ficará oculta até que o botão seja clicado -->
+    <div id="ver-Ajuste" style="display: none;" class="ajuste-container">
+        <header class="ajuste-header">
+            <h2>Ajustes Estoque</h2>
+        
+        </header>
+        <div class="ajuste-info">
+            <label for="data-ajuste">Data:</label>
+            <input type="date" id="data-ajuste" value="2024-10-08">
+            
+            <label for="operacao">Operação:</label>
+            <input type="text" id="operacao"  name="operacao" list="operacoes" placeholder="Entrada ">
+            <datalist id="operacoes">
+                <option value="Entrada"></option>
+                <option value="Saida"></option>
+            </datalist>
+            
+            <label for="observacoes">Observações:</label>
+            <input type="text" id="observacoes">
+            
+            <div class="ajuste-buttons">
+                <button class="btn">Salvar</button>
+                <button class="btn">Alterar</button>
+                <button class="btn">Excluir</button>
+                <button id="voltarBtn1">Fechar</button>
+            </div>
+        </div>
+        
+        <div class="ajuste-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Referência</th>
+                        <th>Mercadoria</th>
+                        <th>Quantidade</th>
+                        <th>Preço Unitário</th>
+                        <th>Preço Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" placeholder="43" disabled></td>
+                        <td><input type="text" placeholder="76235987" disabled></td>
+                        <td><input type="text" placeholder="Heineken 330ml"disabled></td>
+                        <td><input type="number" value="96"disabled></td>
+                        <td><input type="text" placeholder="R$ 4,62"disabled></td>
+                        <td><input type="text" placeholder="R$ 443,52"disabled></td>
+                        <td><button class="btn">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="43" disabled></td>
+                        <td><input type="text" placeholder="76235987" disabled></td>
+                        <td><input type="text" placeholder="Heineken 600ml"disabled></td>
+                        <td><input type="number" value="144"disabled></td>
+                        <td><input type="text" placeholder="R$ 7,42"disabled></td>
+                        <td><input type="text" placeholder="R$ 1068,42"disabled></td>
+                        <td><button class="btn">Excluir</button></td>
+                    </tr>
+                    <!-- Mais itens podem ser adicionados aqui -->
+                </tbody>
+            </table>
+            <footer class="ajuste-footer">
+                <p>Valor Total: R$ 1.607,82 </p>
+                <p>Itens: 240</p>
+                <p>Volumes: 0</p>
+            </footer>
+        </div>
+    </div>
+        <div id="novo-Ajuste" style="display: none;" class="ajuste-container">
+            <header class="ajuste-header">
+                <h2>Ajustes Estoque</h2>
+                
+            </header>
+            <div class="ajuste-info">
+                <label for="data-ajuste">Data:</label>
+                <input type="date" id="data-ajuste" value="2024-10-08">
+                
+                <label for="operacao">Operação:</label>
+                <input type="text" id="operacao"  name="operacao" list="operacoes" placeholder="Entrada ">
+                <datalist id="operacoes">
+                    <option value="Entrada"></option>
+                    <option value="Saida"></option>
+                </datalist>
+                
+                <label for="observacoes">Observações:</label>
+                <input type="text" id="observacoes">
+                
+                <div class="ajuste-buttons">
+                    <button class="btn">Salvar</button>
+                    <button class="btn">Alterar</button>
+                    <button class="btn">Excluir</button>
+                    <button id="voltarBtn2">Fechar</button>
+                </div>
+            </div>
+            
+            <div class="ajuste-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Referência</th>
+                            <th>Mercadoria</th>
+                            <th>Quantidade</th>
+                            <th>Preço Unitário</th>
+                            <th>Preço Total</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" placeholder="" ></td>
+                            <td><input type="text" placeholder="" ></td>
+                            <td><input type="text" placeholder=""></td>
+                            <td><input type="number" value=""></td>
+                            <td><input type="text" placeholder=""></td>
+                            <td><input type="text" placeholder=""></td>
+                            <td><button id="btn-Adicionar">Adicionar</button></td>
+                        </tr>
+                        <!-- Mais itens podem ser adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+    </div> 
+
+    <script src="../JS/ajuste.js"></script>
+</body>
+</html>
 
