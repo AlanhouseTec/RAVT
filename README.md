@@ -9,7 +9,7 @@ Seja bem-vindo ao RAVT! O nosso site de vendas foi desenvolvido com dedicação 
 O sistema é dividido em 4 sessões Cadastro, Vendas, Ajuste de Estoque Relatórios Gerais. Essas sessções são acessadas pelo menu do sistema e para acessar as funções do menu é necessario fazer login.
 ### 1. Cadastro
 
-Em cadastro, o usuário terá opções de cadastrar de: _Funcionarios_ e atribuir um perfil ao mesmo, *Mercadorias* onde pode gerenciar os itens, cadastrar, excluir e editar os itens e por fim -Configurações Gerais-, que permitirá alterar algumas configurações de preferência.
+Em cadastro, o usuário terá opções de cadastrar de: _Funcionarios_ e atribuir um perfil ao mesmo, *Mercadorias* onde pode gerenciar os itens, cadastrar, excluir e editar os itens e por fim Configurações Gerais, que permitirá alterar algumas configurações de preferência.
 
 ### 2. Vendas
 
@@ -28,4 +28,4 @@ Na tela de Relatórops Gerais o usuário poderá escolher entre: *Relatório de 
 O sistema foi feito pelos desenvolvedores seguindo alguns exemplos de informações basicas do sistema SOFTCOM-Técnologia
 
 ## Licence 
-Este projeto é licenciado pelo - MIT LICENCE
+Licença MIT
