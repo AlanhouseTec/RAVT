@@ -1,1 +1,126 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylerelatorioMercadoria.css">
+    <title>Relatório de Mercadoria</title>
+</head>
+<body>
+    <div class="container">
+         <div class="div-header">
+            <h2>Relatórios de Mercadoria</h2>
+            <div class="buttonfechar">
+                <button>
+                <img src="../images/botao-fechar.svg" alt="Fechar"/>
+                </button>
+            </div>
+        </div>
+    <div class="filters">
+        <h2>Filtros</h2>
+        <div class="filters-itensDate">
+            <figcaption>Data Inicial</figcaption>
+            <input type="date" id="start-date">
+        </div>
+        <div class="filters-itensDate">   
+            <figcaption>Data Final</figcaption>
+            <input type="date" id="end-date">
+        </div>
+        <div class="filters-itens">
+            <select>
+                <option value="grupo">Grupo</option>
+            </select>
+        </div>
+        <div class="filters-itens">
+            <select>
+                <option value="subgrupo">SubGrupo</option>
+            </select>
+        </div>
+        <div class="buttons">
+            <button>Aplicar Filtros</button>
+            <button>Limpar Filtros</button>
+        </div>
+    </div>
+    
+    <div class="report">
+        <div class="report-section">
+            <h3>Grupos mais vendidos</h3>
+                <div class="data-box">Em branco - OUTROS</div>
+            </div>
+            <div class="report-section">
+                <h3>Fabricantes mais vendidos</h3>
+                <div class="data-box">Em branco - OUTROS</div>
+            </div>
+            <div class="report-section">
+                <h3>Fornecedores mais vendidos</h3>
+                <div class="data-box">Em branco - OUTROS</div>
+            </div>
+            <div class="report-section">
+                <h3>Mercadorias Não Vendidas</h3>
+                <div class="data-box">Em branco - OUTROS</div>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Referência</th>
+                    <th>Mercadoria</th>
+                    <th>Estoque</th>
+                    <th>Compras</th>
+                    <th>Vendas</th>
+                    <th>Compra R$</th>
+                    <th>Venda R$</th>
+                    <th>Lucro R$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>002</td>
+                    <td>REF002</td>
+                    <td>Produto B</td>
+                    <td>20</td>
+                    <td>100</td>
+                    <td>80</td>
+                    <td>R$50.00</td>
+                    <td>R$80.00</td>
+                    <td>R$1.400.00</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>REF001</td>
+                    <td>Produto A</td>
+                    <td>40</td>
+                    <td>100</td>
+                    <td>60</td>
+                    <td>R$100.00</td>
+                    <td>R$150.00</td>
+                    <td>R$-1.000.00</td>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>003</td>
+                        <td>REF003</td>
+                        <td>Produto C</td>
+                        <td>80</td>
+                        <td>100</td>
+                        <td>20</td>
+                        <td>R$30.00</td>
+                        <td>R$150.00</td>
+                        <td>R$0.00</td>
+                    </tr>
+                </tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="8">Totais:</td>
+                    <td>R$400.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button class="print-button">Imprimir</button>
+    </div>
+</body>
+</html>

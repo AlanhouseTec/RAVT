@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface de Relatórios</title>
+    <link rel="stylesheet" href="../css/stylerelatorioEstoque.css">
+</head>
+<body>
+    <div class="container">
+        <div class="div-header">
+            <h2>Relatorio Exibir Estoque</h2>
+            <div class="buttonfechar">
+                <button>
+                    <img src="../images/botao-fechar.svg" alt="Fechar"/>
+                </button>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <h2>Filtros</h2>
+            <div class="filters-itens">
+                <select><option>Grupo</option></select>
+            </div>
+            <div class="filters-itens">
+                <select><option>SubGrupo</option></select>
+            </div>
+            <div class="filters-itens">       
+                <input type="text" placeholder="Mercadoria">
+            </div>
+            <div class="filters-itens">
+                <input type="text" placeholder="Código">
+            </div>
+            <div class="filters-itens">    
+                <input type="text" placeholder="Referência">
+            </div>
+            <div class="filters-itens">
+                <select>
+                    <option value="" disabled selected>Estoque</option>
+                    <option value="todos">Todos</option>
+                    <option value="maior">Maior que 0</option>
+                    <option value="Zero">Zero</option>
+                    <option value="negativo">Negativo</option>
+                </select>
+            </div>
+            
+            <div class="buttons">
+                <button>Aplicar Filtros</button>
+                <button>Limpar Filtros</button>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div>Mercadorias</div>
+            <div>Grupos</div>
+            <div>Sub-Grupos</div>
+        </div>
+
+        <div class="report">
+            <table>
+                <thead>
+                    <th>Código</th>
+                    <th>Referência</th>
+                    <th>Mercadoria</th>
+                    <th>Preço Compra</th>
+                    <th>Preço Venda</th>
+                    <th>Estoque</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>002</td>
+                        <td>REF002</td>
+                        <td>Produto B</td>
+                        <td>R$50.00</td>
+                        <td>R$80.00</td>
+                        <td>20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <span>Total de Itens:</span>
+            <span>Total de Volumes:</span>
+            <span>Total Compra:</span>
+            <span>Total Venda:</span>
+        </div>
+        <button class="print-button">Imprimir</button>
+    </div>
+</body>
+</html>

@@ -1,1 +1,97 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylerelatorioPeriodo.css">
+    <title>Relatório de Periodo</title>
+</head>
+<body>
+    <div class="container">
+         <div class="div-header">
+            <h2>Relatórios de Periodo</h2>
+            <div class="buttonfechar">
+                <button>
+                <img src="../images/botao-fechar.svg" alt="Fechar"/>
+                </button>
+            </div>
+        </div>
+    
+    <div class="filters">
+        <h2>Filtros</h2>
+        <div class="filters-itensDate">
+            <figcaption>Data Inicial</figcaption>
+            <input type="date" id="start-date">
+        </div>
+        <div class="filters-itensDate">
+            <figcaption>Data Final</figcaption>
+            <input type="date" id="end-date">
+        </div>
+        <div class="filters-itens">
+            <select>
+                <option value="cancelado">Cancelado</option>
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+        </div>
+        <div class="filters-itens">
+            <select>
+                <option value="situacao">Situação</option>
+            </select>
+        </div>
+        <div class="filters-itens">
+            <select>
+                <option value="vendedor">Vendedor</option>
+            </select>
+        </div>
+        <div class="filters-itens">
+        <select>
+            <option value="origem">Origem da Venda</option>
+        </select>
+        </div>
+        
+        <div class="buttons">
+            <button>Aplicar Filtros</button>
+            <button>Limpar Filtros</button>
+        </div>
+    </div>
+    
+    
+    <div class="report">
+        <table>
+            <thead>
+                <tr>
+                    <th>código</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Pedido</th>
+                    <th>Vendedor</th>  
+                    <th>Compra</th>
+                    <th>Venda</th>
+                    <th>Lucro Bruto</th>
+                    <th>Desconto</th>
+                    <th>Lucro Liquido</th>
+                    <th>Situação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>002</td>
+                    <td>07/10/2024</td>
+                    <td>17:52</td>
+                    <td>2342</td>
+                    <td>Rafael Rocha</td>
+                    <td>R$80,00</td>
+                    <td>R$160,00</td>
+                    <td>R$80,00</td>
+                    <td>R$5,00</td>
+                    <td>R$75,00</td>
+                    <td>concluido</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+        <button class="print-button">Imprimir</button>
+    </div>
+</body>
+</html>
