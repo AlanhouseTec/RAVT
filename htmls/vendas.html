@@ -1,1 +1,149 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/vendas.css">
+</head>
+<body>
+    <header>
+        <figure><img src="/images/logoRAVT.svg" alt="RAVT"></figure>
+        <h1>RAVT System</h1>
+        <a href="menu.html"><button class="voltarMenu"><img src="/images/botao-fechar.svg" alt="Fechar"  width="30px" height="30px"></button></a>
+    </header>
+    <main>
+        <div class="funcoes">
+            <button id="novavenda">Nova Venda</button>
+            <button id="mostravenda">Mostrar Vendas</button>
+        </div>
+
+        <div id="vendas" style="display: none;">
+            <div class="cabecalho">
+                <h2>Nova venda</h2>
+                <div>
+                    <button id="fecharvenda"><img src="/images/botao-fechar.svg" alt="Fechar" width="30px" height="30px"></button>
+                </div>
+            </div>
+            <div class="formulario">
+                <div class="grupo">
+                    <label for="vendedor">Vendedor</label>
+                    <input type="text" id="vendedor" name="vendedor">
+                </div>
+                <div class="grupo">
+                    <label for="data">Data venda</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <div class="grupo">
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" name="hora">
+                </div>
+                <div class="grupo">
+                    <label for="observacao">Observações</label>
+                    <input type="text" id="observacao" name="observacao">
+                </div>
+            </div>
+            <div class="formulario">
+                <div class="grupo">
+                    <label for="codigo">Código</label>
+                    <input type="text" id="codigo" name="codigo">
+                </div>
+                <div class="grupo">
+                    <label for="referencia">Referência</label>
+                    <input type="text" id="referencia" name="referencia">
+                </div>
+                <div class="grupo">
+                    <label for="mercadoria">Mercadoria</label>
+                    <input type="text" id="mercadoria" name="mercadoria">
+                </div>
+                <div class="grupo">
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" id="quantidade" name="quantidade">
+                </div>
+                <div class="grupo">
+                    <label for="preco">Preço</label>
+                    <input type="number" id="preco" name="preco">
+                </div>
+                <div class="grupo">
+                    <label for="total">Total</label>
+                    <input type="numer" id="total" name="total">
+                </div>
+            </div>
+            <div class="formulario">
+                <div class="grupo">
+                    <label for="pagamento">Pagamento</label>
+                    <select name="pagamento" id="pagamento">
+                        <option value="cartao">Cartão</option>
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="pix">Pix</option>
+                    </select>
+                </div>
+                <div class="grupo">
+                    <label for="cartao">Cartão</label>
+                    <select name="cartao" id="cartao">
+                        <option value="credito">Crédito</option>
+                        <option value="debito">Débito</option>
+                    </select>
+                </div>
+                <div class="grupo">
+                    <label for="parcelas">Parcelas</label>
+                    <input type="number" id="parcelas" name="parcelas">
+                </div>
+                <div class="grupo">
+                    <label for="valor">Valor</label>
+                    <input type="number" id="valor" name="valor">
+                </div>
+                <div class="grupo">
+                    <button id="concluir">Concluir venda</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mostrar-vendas" style="display: none;">
+            <div class="cabecalho">
+                <h2>Mostrar vendas</h2>
+                <div>
+                    <button id="fecharmostra"><img src="/images/botao-fechar.svg" alt="Fechar" width="30px" height="30px"></button>
+                </div>
+            </div>
+            <div class="filtros">
+                <div class="entradas">
+                    <label>Buscar por pedido:<input type="text" name="busca-pedido"></label>
+                    <label>Buscar por data:<input type="date" name="data"></label>
+                </div>
+                <div class="buscar">
+                    <button>Buscar</button>
+                    <button>Limpar busca</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pedido</th>
+                        <th>Vendedor</th>
+                        <th>Data da venda</th>
+                        <th>Hora da venda</th>
+                        <th>Preço de Venda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12547</td>
+                        <td>Talles Carsoso</td>
+                        <td>08/10/2024</td>
+                        <td>10:55</td>
+                        <td>R$ 1.200,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>E-mail para contato</p>
+        <p>RAVT@gmail.com</p>
+    </footer>
+    <script src="js/vendas.js"></script>
+</body>
+</html>

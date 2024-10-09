@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    height: 50px;
+    color: white;
+    background: rgb(255,102,0);
+    background: linear-gradient(90deg, rgba(255,102,0,1) 0%, rgba(255,153,0,1) 25%, rgba(255,230,145,1) 100%);
+
+    h1 {
+        position: absolute; /* Posiciona o h1 no centro absoluto */
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+    .voltarMenu {
+        background-color: transparent; 
+        border: none;
+        cursor: pointer; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background-color: rgba(255, 230, 145, 0.7);
+            border-radius: 50%; /* Arredonda o botão */
+            transform: scale(1.1); 
+        }
+    }
+    
+    figure {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100px;
+            height: 50px;
+        }
+    }
+}
+
+main {
+    min-height: 90vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .funcoes {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        height: 60px;
+        width: 100%;
+
+        button {
+            width: 150px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(255, 150, 0, 0.8);
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(255, 150, 0);
+            }
+        }
+    }
+
+    // Estilos para Todos
+    #mercadorias, #funcionarios, #configuracoes {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        width: 75%;
+        background-color: beige;
+        margin: 20px 0;
+        border-radius: 5px;
+        border: 1px solid;
+        position: relative;
+        .tabela{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            width: 100%;
+            height: 300px;
+            background-color: #fffff0;
+            .cabecalho{
+                height: 60px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                button{
+                    width: 35px;
+                    height: 35px;
+                    color: white;
+                    border: 0;
+                    cursor: pointer;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: rgb(240, 240, 220);
+                        border-radius: 8px;
+                    }
+                }
+            }
+            .filtros{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .entradas{
+                    width: 75%;
+                    input{
+                        width: 50%;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
+                }
+                .buscar{
+                    display: flex;
+                    flex-direction: column;
+                    button{
+                        width: 80px;
+                        height: 40px;
+                        margin-bottom: 5px;
+                        border-radius: 4px;
+                        color: white;
+                        background-color: rgba(255, 150, 0, 0.8);
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgb(255, 150, 0);
+                        }
+                    }
+                }
+            }
+            table{
+                width: 100%; /* A tabela ocupará toda a largura do container */
+                border-collapse: collapse; /* Remove os espaços entre as bordas */
+                margin: 20px 0; /* Espaçamento externo */
+                th {
+                    background-color: #f4f4f4; /* Cor de fundo para o cabeçalho */
+                    color: #333; /* Cor do texto do cabeçalho */
+                    font-weight: bold; /* Negrito no cabeçalho */
+                }
+                th, td {
+                    border: 1px solid #ddd; /* Define bordas */
+                    padding: 8px; /* Espaçamento interno */
+                    text-align: left; /* Alinhamento do texto */
+                }
+                tr{
+                    background-color: white;
+                    &:nth-child(even) {
+                        background-color: #f9f9f9; /* Cor de fundo para as linhas pares */
+                    }
+                    &:hover{
+                        background-color: #f4f4f4;
+                    }
+                }
+                button{
+                    width: 50px;
+                    height: 35px;
+                    border: 0;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgb(255, 255, 220);
+                    }
+                }
+            }
+        }
+
+        #novamerc, #novofunc, #areaconfig {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgba(255, 255, 240, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 75%;
+            position: absolute;
+            z-index: 2;
+            .conteudo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 75px;
+                button {
+                    width: 35%;
+                    padding: 10px;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #45a049;
+                    }
+                }
+                #fecharaddfunc, #fecharaddmerc{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
+                    height: 35px;
+                    color: transparent;
+                    border: 0;
+                    cursor: pointer;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: rgb(240, 240, 220);
+                        border-radius: 8px;
+                    }
+                }
+            }
+            .formulario{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                .desativar {
+                    font-size: 16px;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    input{
+                        width: 15px;
+                        height: 15px;
+                        margin-left: 10px;
+                    }
+                }
+                .grupo {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 15px;
+                    label {
+                        margin: 5px;
+                        font-weight: bold;
+                    }
+                    input, select, textarea {
+                        width: 100%;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 16px;
+                    }
+                    textarea {
+                        height: 100px;
+                        resize: none;
+                    }
+                }
+            }
+        }
+        #areaconfig{
+            position: static;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    padding: 1%;
+    color: White;
+    background: rgb(255,102,0);
+    background: linear-gradient(90deg, rgba(255,102,0,1) 0%, rgba(255,153,0,1) 25%, rgba(255,230,145,1) 100%);
+}

@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  height: 50px;
+  color: white;
+  background: rgb(255, 102, 0);
+  background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+}
+header button {
+  width: 70px;
+  height: 35px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  background-color: rgba(255, 150, 0, 0.8);
+  cursor: pointer;
+}
+header button:hover {
+  background-color: rgb(255, 150, 0);
+}
+header figure {
+  display: flex;
+  align-items: center;
+}
+header figure img {
+  width: 100px;
+  height: 50px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 86vh;
+  padding-top: 10px;
+  background-color: white;
+}
+main .menu {
+  display: flex;
+  align-items: flex-start;
+  width: 80%;
+}
+main .menu h2 {
+  margin: 20px;
+  font-size: 30px;
+}
+main .menu p {
+  font-size: 25px;
+  width: 85%;
+}
+main .login {
+  border-top: 10px red;
+  width: 50%;
+  height: 300px;
+  margin-top: 10%;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+main .login input {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+main .login .manter {
+  display: flex;
+  align-items: center;
+}
+main .login .manter input {
+  margin-right: 10px;
+}
+main .login button {
+  width: 75px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 150, 0, 0.8);
+  cursor: pointer;
+}
+main .login button:hover {
+  background-color: rgb(255, 150, 0);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1%;
+  color: White;
+  background: rgb(255, 102, 0);
+  background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+}
+
+@media only screen and (MAX-WIDTH: 400px) {
+  header h1 {
+    width: 40%;
+    font-size: 22px;
+  }
+  header button {
+    width: 17%;
+    padding: 2%;
+    font-weight: bold;
+  }
+  header figure img {
+    width: 70px;
+    height: 35px;
+  }
+  main {
+    width: 100%;
+  }
+  main .menu {
+    display: flex;
+    width: 100%;
+  }
+  main .menu img {
+    display: none;
+  }
+  main .menu p {
+    width: 90%;
+    font-size: 22px;
+    margin: 15px;
+    display: flex;
+    text-align: justify;
+  }
+  main .login {
+    width: 75%;
+    margin-top: 27%;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,279 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  height: 50px;
+  color: white;
+  background: rgb(255, 102, 0);
+  background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+}
+header h1 {
+  position: absolute; /* Posiciona o h1 no centro absoluto */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+header .voltarMenu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+header .voltarMenu:hover {
+  background-color: rgba(255, 230, 145, 0.7);
+  border-radius: 50%; /* Arredonda o botão */
+  transform: scale(1.1);
+}
+header figure {
+  display: flex;
+  align-items: center;
+}
+header figure img {
+  width: 100px;
+  height: 50px;
+}
+
+main {
+  min-height: 90vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .funcoes {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 60px;
+  width: 100%;
+}
+main .funcoes button {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(255, 150, 0, 0.8);
+  border-radius: 10px;
+  cursor: pointer;
+}
+main .funcoes button:hover {
+  background-color: rgb(255, 150, 0);
+}
+main #mercadorias, main #funcionarios, main #configuracoes {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  background-color: beige;
+  margin: 20px 0;
+  border-radius: 5px;
+  border: 1px solid;
+  position: relative;
+}
+main #mercadorias .tabela, main #funcionarios .tabela, main #configuracoes .tabela {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  height: 300px;
+  background-color: #fffff0;
+}
+main #mercadorias .tabela .cabecalho, main #funcionarios .tabela .cabecalho, main #configuracoes .tabela .cabecalho {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main #mercadorias .tabela .cabecalho button, main #funcionarios .tabela .cabecalho button, main #configuracoes .tabela .cabecalho button {
+  width: 35px;
+  height: 35px;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+main #mercadorias .tabela .cabecalho button:hover, main #funcionarios .tabela .cabecalho button:hover, main #configuracoes .tabela .cabecalho button:hover {
+  background-color: rgb(240, 240, 220);
+  border-radius: 8px;
+}
+main #mercadorias .tabela .filtros, main #funcionarios .tabela .filtros, main #configuracoes .tabela .filtros {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #mercadorias .tabela .filtros .entradas, main #funcionarios .tabela .filtros .entradas, main #configuracoes .tabela .filtros .entradas {
+  width: 75%;
+}
+main #mercadorias .tabela .filtros .entradas input, main #funcionarios .tabela .filtros .entradas input, main #configuracoes .tabela .filtros .entradas input {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+main #mercadorias .tabela .filtros .buscar, main #funcionarios .tabela .filtros .buscar, main #configuracoes .tabela .filtros .buscar {
+  display: flex;
+  flex-direction: column;
+}
+main #mercadorias .tabela .filtros .buscar button, main #funcionarios .tabela .filtros .buscar button, main #configuracoes .tabela .filtros .buscar button {
+  width: 80px;
+  height: 40px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  color: white;
+  background-color: rgba(255, 150, 0, 0.8);
+  cursor: pointer;
+}
+main #mercadorias .tabela .filtros .buscar button:hover, main #funcionarios .tabela .filtros .buscar button:hover, main #configuracoes .tabela .filtros .buscar button:hover {
+  background-color: rgb(255, 150, 0);
+}
+main #mercadorias .tabela table, main #funcionarios .tabela table, main #configuracoes .tabela table {
+  width: 100%; /* A tabela ocupará toda a largura do container */
+  border-collapse: collapse; /* Remove os espaços entre as bordas */
+  margin: 20px 0; /* Espaçamento externo */
+}
+main #mercadorias .tabela table th, main #funcionarios .tabela table th, main #configuracoes .tabela table th {
+  background-color: #f4f4f4; /* Cor de fundo para o cabeçalho */
+  color: #333; /* Cor do texto do cabeçalho */
+  font-weight: bold; /* Negrito no cabeçalho */
+}
+main #mercadorias .tabela table th, main #mercadorias .tabela table td, main #funcionarios .tabela table th, main #funcionarios .tabela table td, main #configuracoes .tabela table th, main #configuracoes .tabela table td {
+  border: 1px solid #ddd; /* Define bordas */
+  padding: 8px; /* Espaçamento interno */
+  text-align: left; /* Alinhamento do texto */
+}
+main #mercadorias .tabela table tr, main #funcionarios .tabela table tr, main #configuracoes .tabela table tr {
+  background-color: white;
+}
+main #mercadorias .tabela table tr:nth-child(even), main #funcionarios .tabela table tr:nth-child(even), main #configuracoes .tabela table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cor de fundo para as linhas pares */
+}
+main #mercadorias .tabela table tr:hover, main #funcionarios .tabela table tr:hover, main #configuracoes .tabela table tr:hover {
+  background-color: #f4f4f4;
+}
+main #mercadorias .tabela table button, main #funcionarios .tabela table button, main #configuracoes .tabela table button {
+  width: 50px;
+  height: 35px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main #mercadorias .tabela table button:hover, main #funcionarios .tabela table button:hover, main #configuracoes .tabela table button:hover {
+  background-color: rgb(255, 255, 220);
+}
+main #mercadorias #novamerc, main #mercadorias #novofunc, main #mercadorias #areaconfig, main #funcionarios #novamerc, main #funcionarios #novofunc, main #funcionarios #areaconfig, main #configuracoes #novamerc, main #configuracoes #novofunc, main #configuracoes #areaconfig {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 240, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  position: absolute;
+  z-index: 2;
+}
+main #mercadorias #novamerc .conteudo, main #mercadorias #novofunc .conteudo, main #mercadorias #areaconfig .conteudo, main #funcionarios #novamerc .conteudo, main #funcionarios #novofunc .conteudo, main #funcionarios #areaconfig .conteudo, main #configuracoes #novamerc .conteudo, main #configuracoes #novofunc .conteudo, main #configuracoes #areaconfig .conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+}
+main #mercadorias #novamerc .conteudo button, main #mercadorias #novofunc .conteudo button, main #mercadorias #areaconfig .conteudo button, main #funcionarios #novamerc .conteudo button, main #funcionarios #novofunc .conteudo button, main #funcionarios #areaconfig .conteudo button, main #configuracoes #novamerc .conteudo button, main #configuracoes #novofunc .conteudo button, main #configuracoes #areaconfig .conteudo button {
+  width: 35%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+main #mercadorias #novamerc .conteudo button:hover, main #mercadorias #novofunc .conteudo button:hover, main #mercadorias #areaconfig .conteudo button:hover, main #funcionarios #novamerc .conteudo button:hover, main #funcionarios #novofunc .conteudo button:hover, main #funcionarios #areaconfig .conteudo button:hover, main #configuracoes #novamerc .conteudo button:hover, main #configuracoes #novofunc .conteudo button:hover, main #configuracoes #areaconfig .conteudo button:hover {
+  background-color: #45a049;
+}
+main #mercadorias #novamerc .conteudo #fecharaddfunc, main #mercadorias #novamerc .conteudo #fecharaddmerc, main #mercadorias #novofunc .conteudo #fecharaddfunc, main #mercadorias #novofunc .conteudo #fecharaddmerc, main #mercadorias #areaconfig .conteudo #fecharaddfunc, main #mercadorias #areaconfig .conteudo #fecharaddmerc, main #funcionarios #novamerc .conteudo #fecharaddfunc, main #funcionarios #novamerc .conteudo #fecharaddmerc, main #funcionarios #novofunc .conteudo #fecharaddfunc, main #funcionarios #novofunc .conteudo #fecharaddmerc, main #funcionarios #areaconfig .conteudo #fecharaddfunc, main #funcionarios #areaconfig .conteudo #fecharaddmerc, main #configuracoes #novamerc .conteudo #fecharaddfunc, main #configuracoes #novamerc .conteudo #fecharaddmerc, main #configuracoes #novofunc .conteudo #fecharaddfunc, main #configuracoes #novofunc .conteudo #fecharaddmerc, main #configuracoes #areaconfig .conteudo #fecharaddfunc, main #configuracoes #areaconfig .conteudo #fecharaddmerc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  color: transparent;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+main #mercadorias #novamerc .conteudo #fecharaddfunc:hover, main #mercadorias #novamerc .conteudo #fecharaddmerc:hover, main #mercadorias #novofunc .conteudo #fecharaddfunc:hover, main #mercadorias #novofunc .conteudo #fecharaddmerc:hover, main #mercadorias #areaconfig .conteudo #fecharaddfunc:hover, main #mercadorias #areaconfig .conteudo #fecharaddmerc:hover, main #funcionarios #novamerc .conteudo #fecharaddfunc:hover, main #funcionarios #novamerc .conteudo #fecharaddmerc:hover, main #funcionarios #novofunc .conteudo #fecharaddfunc:hover, main #funcionarios #novofunc .conteudo #fecharaddmerc:hover, main #funcionarios #areaconfig .conteudo #fecharaddfunc:hover, main #funcionarios #areaconfig .conteudo #fecharaddmerc:hover, main #configuracoes #novamerc .conteudo #fecharaddfunc:hover, main #configuracoes #novamerc .conteudo #fecharaddmerc:hover, main #configuracoes #novofunc .conteudo #fecharaddfunc:hover, main #configuracoes #novofunc .conteudo #fecharaddmerc:hover, main #configuracoes #areaconfig .conteudo #fecharaddfunc:hover, main #configuracoes #areaconfig .conteudo #fecharaddmerc:hover {
+  background-color: rgb(240, 240, 220);
+  border-radius: 8px;
+}
+main #mercadorias #novamerc .formulario, main #mercadorias #novofunc .formulario, main #mercadorias #areaconfig .formulario, main #funcionarios #novamerc .formulario, main #funcionarios #novofunc .formulario, main #funcionarios #areaconfig .formulario, main #configuracoes #novamerc .formulario, main #configuracoes #novofunc .formulario, main #configuracoes #areaconfig .formulario {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+main #mercadorias #novamerc .formulario .desativar, main #mercadorias #novofunc .formulario .desativar, main #mercadorias #areaconfig .formulario .desativar, main #funcionarios #novamerc .formulario .desativar, main #funcionarios #novofunc .formulario .desativar, main #funcionarios #areaconfig .formulario .desativar, main #configuracoes #novamerc .formulario .desativar, main #configuracoes #novofunc .formulario .desativar, main #configuracoes #areaconfig .formulario .desativar {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #mercadorias #novamerc .formulario .desativar input, main #mercadorias #novofunc .formulario .desativar input, main #mercadorias #areaconfig .formulario .desativar input, main #funcionarios #novamerc .formulario .desativar input, main #funcionarios #novofunc .formulario .desativar input, main #funcionarios #areaconfig .formulario .desativar input, main #configuracoes #novamerc .formulario .desativar input, main #configuracoes #novofunc .formulario .desativar input, main #configuracoes #areaconfig .formulario .desativar input {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+main #mercadorias #novamerc .formulario .grupo, main #mercadorias #novofunc .formulario .grupo, main #mercadorias #areaconfig .formulario .grupo, main #funcionarios #novamerc .formulario .grupo, main #funcionarios #novofunc .formulario .grupo, main #funcionarios #areaconfig .formulario .grupo, main #configuracoes #novamerc .formulario .grupo, main #configuracoes #novofunc .formulario .grupo, main #configuracoes #areaconfig .formulario .grupo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+main #mercadorias #novamerc .formulario .grupo label, main #mercadorias #novofunc .formulario .grupo label, main #mercadorias #areaconfig .formulario .grupo label, main #funcionarios #novamerc .formulario .grupo label, main #funcionarios #novofunc .formulario .grupo label, main #funcionarios #areaconfig .formulario .grupo label, main #configuracoes #novamerc .formulario .grupo label, main #configuracoes #novofunc .formulario .grupo label, main #configuracoes #areaconfig .formulario .grupo label {
+  margin: 5px;
+  font-weight: bold;
+}
+main #mercadorias #novamerc .formulario .grupo input, main #mercadorias #novamerc .formulario .grupo select, main #mercadorias #novamerc .formulario .grupo textarea, main #mercadorias #novofunc .formulario .grupo input, main #mercadorias #novofunc .formulario .grupo select, main #mercadorias #novofunc .formulario .grupo textarea, main #mercadorias #areaconfig .formulario .grupo input, main #mercadorias #areaconfig .formulario .grupo select, main #mercadorias #areaconfig .formulario .grupo textarea, main #funcionarios #novamerc .formulario .grupo input, main #funcionarios #novamerc .formulario .grupo select, main #funcionarios #novamerc .formulario .grupo textarea, main #funcionarios #novofunc .formulario .grupo input, main #funcionarios #novofunc .formulario .grupo select, main #funcionarios #novofunc .formulario .grupo textarea, main #funcionarios #areaconfig .formulario .grupo input, main #funcionarios #areaconfig .formulario .grupo select, main #funcionarios #areaconfig .formulario .grupo textarea, main #configuracoes #novamerc .formulario .grupo input, main #configuracoes #novamerc .formulario .grupo select, main #configuracoes #novamerc .formulario .grupo textarea, main #configuracoes #novofunc .formulario .grupo input, main #configuracoes #novofunc .formulario .grupo select, main #configuracoes #novofunc .formulario .grupo textarea, main #configuracoes #areaconfig .formulario .grupo input, main #configuracoes #areaconfig .formulario .grupo select, main #configuracoes #areaconfig .formulario .grupo textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+main #mercadorias #novamerc .formulario .grupo textarea, main #mercadorias #novofunc .formulario .grupo textarea, main #mercadorias #areaconfig .formulario .grupo textarea, main #funcionarios #novamerc .formulario .grupo textarea, main #funcionarios #novofunc .formulario .grupo textarea, main #funcionarios #areaconfig .formulario .grupo textarea, main #configuracoes #novamerc .formulario .grupo textarea, main #configuracoes #novofunc .formulario .grupo textarea, main #configuracoes #areaconfig .formulario .grupo textarea {
+  height: 100px;
+  resize: none;
+}
+main #mercadorias #areaconfig, main #funcionarios #areaconfig, main #configuracoes #areaconfig {
+  position: static;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1%;
+  color: White;
+  background: rgb(255, 102, 0);
+  background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+}/*# sourceMappingURL=cadastro.css.map */
