@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <figure><img src="/images/logoRAVT.svg" alt="RAVT"></figure>
+        <h1>RAVT System</h1>
+        <a href="menu.html"><button class="voltarMenu"><img src="/images/botao-fechar.svg" alt="Fechar"  width="30px" height="30px"></button></a>
+    </header>
 
+    <main>
+        <div class="funcoes">
+            <button id="func">Funcionários</button>
+            <button id="merc">Mercadorias</button>
+            <button id="config">Configurações</button>
+        </div>
+        <div id="funcionarios" style="display: none;">
+            <div class="tabela">
+                <div class="cabecalho">
+                    <h2>Cadastro funcionário</h2>
+                    <div>
+                        <button id="adicionarfunc"><img src="/images/novo-documento.svg" alt="Adicionar" width="30px" height="30px"></button>
+                        <button id="fecharfunc"><img src="/images/botao-fechar.svg" alt="Fechar" width="30px" height="30px"></button>
+                    </div>
+                    
+                </div>
+                <div class="filtros">
+                    <div class="entradas">
+                        <input type="text" placeholder="Buscar por nome" name="nome">
+                        <input type="number" placeholder="Buscar por CPF" name="cpf">
+                    </div>
+                    <div class="buscar">
+                        <button>Buscar</button>
+                        <button>Limpar busca</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Funcionários</th>
+                            <th>Data contratação</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rafael Rocha</td>
+                            <td>14/03/2005</td>
+                            <td>124.652.789-79</td>
+                            <td>(33) 999876325</td>
+                            <td><button>Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+            </div>
+            <div id="novofunc" style="display: none;">
+                <div class="conteudo" style="justify-content: space-between;">
+                    <h2>Formulário do Funcionário</h2>
+                    <button id="fecharaddfunc"><img src="/images/botao-fechar.svg" alt="Fechar"  width="30px" height="30px"></button>
+                </div>
+
+                <div class="formulario">
+                    <div class="grupo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu Nome">
+                        <label for="data-nascimento">Data de Nascimento:</label>
+                        <input type="date" id="data-nascimento" name="data-nascimento">
+                    </div>
+        
+                    <div class="grupo">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha">
+                        <label for="telefone">Telefones:</label>
+                        <input type="text" id="telefone" name="telefone">
+                    </div>
+        
+                    <div class="grupo">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco">
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep">
+                    </div>
+                        
+                    <div class="grupo">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" id="bairro" name="bairro">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="uf">UF:</label>
+                        <select id="uf" name="uf">
+                            <option value="MG">AC</option>
+                            <option value="MG">AL</option>
+                            <option value="MG">AP</option>
+                            <option value="MG">AM</option>
+                            <option value="MG">BA</option>
+                            <option value="MG">CE</option>
+                            <option value="MG">DF</option>
+                            <option value="MG">ES</option>
+                            <option value="MG">GO</option>
+                            <option value="MG">MA</option>
+                            <option value="MG">MT</option>
+                            <option value="MG">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="MG">PA</option>
+                            <option value="SP">PB</option>
+                            <option value="RJ">PR</option>
+                            <option value="MG">PE</option>
+                            <option value="MG">PI</option>
+                            <option value="MG">RJ</option>
+                            <option value="MG">RN</option>
+                            <option value="MG">RS</option>
+                            <option value="MG">RO</option>
+                            <option value="MG">RR</option>
+                            <option value="MG">SC</option>
+                            <option value="MG">SP</option>
+                            <option value="MG">SE</option>
+                            <option value="MG">TO</option>
+                            
+                        </select>
+                        <label for="rg">RG:</label>
+                        <input type="text" id="rg" name="rg">
+                    </div>
+
+                    <div class="desativar">
+                        <label for="desativa1">Desativar funcionário</label>
+                        <input id="desativa1" type="checkbox">
+                    </div>
+                </div>
+
+                <div class="conteudo">
+                    <button id="addfunc">Adicionar</button>
+                </div>
+                
+            </div>
+        </div>
+        <div id="mercadorias" style="display: none;">
+            <div class="tabela">
+                <div class="cabecalho">
+                    <h2>Cadastro mercadoria</h2>
+                    <div>
+                        <button id="adicionarmerc"><img src="/images/novo-documento.svg" alt="Adicionar" width="30px" height="30px"></button>
+                        <button id="fecharmerc"><img src="/images/botao-fechar.svg" alt="Fechar" width="30px" height="30px"></button>
+                    </div>
+                </div>
+                <div class="filtros">
+                    <div class="entradas">
+                        <input type="text" placeholder="Buscar por nome" name="nome-mercadoria">
+                        <input type="text" placeholder="Buscar por grupo" name="grupo">
+                    </div>
+                    <div class="buscar">
+                        <button>Buscar</button>
+                        <button>Limpar busca</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mercadoria</th>
+                            <th>Grupo</th>
+                            <th>Subgrupo</th>
+                            <th>Estoque</th>
+                            <th>Preço de Venda</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produto Exemplo</td>
+                            <td>Eletrônicos</td>
+                            <td>Celulares</td>
+                            <td>150</td>
+                            <td>R$ 1.200,00</td>
+                            <td><button>Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="novamerc" style="display: none;">
+                <div class="conteudo" style="justify-content: space-between;">
+                    <h2>Formulário da Mercadoria</h2>
+                    <button id="fecharaddmerc"><img src="/images/botao-fechar.svg" alt="Fechar"  width="30px" height="30px"></button>
+                </div>
+        
+                <div class="formulario">
+                    <div class="grupo">
+                        <label for="mercadoria">Mercadoria:</label>
+                        <input type="text" id="mercadoria" name="mercadoria" placeholder="Nome da Mercadoria">
+                        <label for="grupo">Grupo:</label>
+                        <input type="text" id="grupo" name="grupo">
+                    </div>
+        
+                    <div class="grupo">
+                        <label for="subgrupo">SubGrupo:</label>
+                        <input type="text" id="subgrupo" name="subgrupo">
+                        <label for="referencia">Referência:</label>
+                        <input type="text" id="referencia" name="referencia">
+                    </div>
+        
+                    <div class="grupo">
+                        <label for="estoque">Estoque:</label>
+                        <input type="text" id="estoque" name="estoque">
+                        <label for="preco-venda">Preço Venda (R$):</label>
+                        <input type="text" id="preco-venda" name="preco-venda">
+                    </div>
+        
+                    <div class="grupo">
+                        <label for="margem-venda">Margem Venda (%):</label>
+                        <input type="text" id="margem-venda" name="margem-venda">
+                        <label for="ultima-entrada">Última Entrada:</label>
+                        <input type="date" id="ultima-entrada" name="ultima-entrada">
+                    </div>
+        
+                    <div class="desativar">
+                        <label for="desativa2">Desativar mercadoria</label>
+                        <input id="desativa2" type="checkbox">
+                    </div>
+                </div>
+        
+                <div class="conteudo">
+                    <button id="addmerc">Adicionar</button>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <div id="configuracoes" style="display: none;">
+            <div id="areaconfig">
+                <div class="conteudo"><h2>Configurações</h2></div>
+
+                <div class="formulario">
+                    <div class="grupo">
+                        <label for="senha-desconto">Senha Desconto</label>
+                        <input type="text" id="senha-desconto" name="senha-desconto" value="1234">
+                    </div>
+                
+                    <div class="grupo">
+                        <label for="aceitar-mercadorias">Aceitar Mercadorias Repetidas</label>
+                        <select id="aceitar-mercadorias" name="aceitar-mercadorias">
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                
+                    <div class="grupo">
+                        <label for="bloquear-credito">Bloquear Limite de Crédito</label>
+                        <select id="bloquear-credito" name="bloquear-credito">
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                
+                    <div class="grupo">
+                        <label for="parcelador-venda">Utilizar Parcelador na Venda</label>
+                        <select id="parcelador-venda" name="parcelador-venda">
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                
+                    <div class="grupo">
+                        <label for="bloquear-estoque">Bloquear Item Sem Estoque</label>
+                        <select id="bloquear-estoque" name="bloquear-estoque">
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                
+                    <div class="grupo">
+                        <label for="logoff-automatico">Logoff Automático</label>
+                        <select id="logoff-automatico" name="logoff-automatico">
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                
+                    <div class="grupo">
+                        <label for="tempo-logoff">Tempo (Min) para logoff</label>
+                        <input type="number" id="tempo-logoff" name="tempo-logoff" value="5">
+                    </div>
+                </div>
+
+                <div class="conteudo">
+                    <button id="saveconfig">Alterar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>E-mail para contato</p>
+        <p>ravt@gmail.com</p>
+    </footer>
+
+    <script src="/js/cadastro.js"></script>
+</body>
+</html>
