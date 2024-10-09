@@ -4,16 +4,33 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-
+main{
+    min-height: 80vh;
+}
 #container {
     max-width: 1200px;
+    min-height: 80vh;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    height: 50px;
+    color: white;
+    background: rgb(255, 102, 0);
+    background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+  }
+header button{
+    z-index: 2;
+    background-color: transparent;
+}
 
-header h1 {
+#container-header h1 {
     text-align: center;
     color: #333;
 }
@@ -69,13 +86,6 @@ button:hover {
 .tabela th {
     background-color: #f8f8f8;
 }
-
-footer {
-    text-align: right;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
 
 #container-header{
     display: flex;
@@ -205,11 +215,17 @@ footer {
 }
 
 footer {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-    text-align: right;
-}
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    color: White;
+    background: rgb(255, 102, 0);
+    background: linear-gradient(90deg, rgb(255, 102, 0) 0%, rgb(255, 153, 0) 25%, rgb(255, 230, 145) 100%);
+  }
+  footer p{
+    margin: 0;
+  }
 
 /* Limita o tamanho dos campos de data */
 input[type="date"], [type="text"]{
@@ -237,3 +253,12 @@ a {
     text-decoration: none; /* Remove sublinhado */
     display: inline-block; /* Para aplicar largura e altura */
 }
+header figure {
+    display: flex;
+    align-items: center;
+  }
+  header figure img {
+    width: 150px;
+    height: auto;
+  }
+  

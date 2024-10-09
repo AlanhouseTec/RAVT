@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajuste de Estoque</title>
-    <link rel="stylesheet" href="../css/ajuste.css">
+    <link rel="stylesheet" href="/css/ajuste.css">
 </head>
-<body>
+<body>  
+    <header>
+
+            <figure><img src="/images/logoRAVT.svg" alt="RAVT"></figure>
+            <h1>RAVT System</h1>
+            <a href="menu.html"><button class="voltarMenu"><img src="/images/botao-fechar.svg" alt="Fechar"  width="30px" height="30px"></button></a>
+    </header>
+    <main>
     <div id="container">
-        <header>
+      
             <div id="container-header">
                 <h1>Ajuste de Estoque</h1>
                 <div class="button-header">
                     <button id="novoBtn">
-                        <img width="30px" height="30px" src="../images/novo-documento.svg" title="Novo" alt="">
+                        <img width="30px" height="30px" src="/images/novo-documento.svg" title="Novo" alt="">
                     </button>
-                    <a href="../html's/menu.html">
-                        <button id="fechar"href>
-                        <img width="30px" height="30px" src="../images/botao-fechar.svg" title="Fechar" alt="">
-                        </button>
-                    </a>
                 </div>
             </div>
-        </header>
         <div class="filters">
             <div class="filter-item">
                 <label for="data-inicial">Data Inicial:</label>
@@ -69,10 +70,10 @@
     </div>
     <!-- Esta div ficará oculta até que o botão seja clicado -->
     <div id="ver-Ajuste" style="display: none;" class="ajuste-container">
-        <header class="ajuste-header">
+        <div class="ajuste-header">
             <h2>Ajustes Estoque</h2>
         
-        </header>
+        </div>
         <div class="ajuste-info">
             <label for="data-ajuste">Data:</label>
             <input type="date" id="data-ajuste" value="2024-10-08">
@@ -138,10 +139,10 @@
         </div>
     </div>
         <div id="novo-Ajuste" style="display: none;" class="ajuste-container">
-            <header class="ajuste-header">
+            <div class="ajuste-header">
                 <h2>Ajustes Estoque</h2>
                 
-            </header>
+            </div>
             <div class="ajuste-info">
                 <label for="data-ajuste">Data:</label>
                 <input type="date" id="data-ajuste" value="2024-10-08">
@@ -191,8 +192,15 @@
                     </tbody>
                 </table>
             </div>
-    </div> 
+    </div>
+    </main>
+     
+    <footer>
+        <p>E-mail para contato</p>
+        <p>ravt.ravt@gmail.com</p>
+    </footer>
 
-    <script src="../JS/ajuste.js"></script>
+    <script src="/js/ajuste.js"></script>
 </body>
 </html>
+

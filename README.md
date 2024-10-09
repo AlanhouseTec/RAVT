@@ -28,3 +28,4 @@ Na tela de Relatórops Gerais o usuário poderá escolher entre: *Relatório de 
 O sistema foi feito pelos desenvolvedores seguindo alguns exemplos de informações basicas do sistema SOFTCOM-Técnologia
 
 ## Licence 
+Este projeto é licenciado pelo - MIT LICENCE
